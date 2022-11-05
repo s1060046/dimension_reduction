@@ -4,7 +4,7 @@
 
 see main.py script
 
-ProjectManager takes ata_fetcher_class, dimension_reducer_class, variability_calculator_class, de_runner_class and an input file
+ProjectManager takes data_fetcher_class, dimension_reducer_class, variability_calculator_class, de_runner_class and an input file
 
 run method carries out the analysis with an integer as argument. this is the number of features used for dimension reduction
 
