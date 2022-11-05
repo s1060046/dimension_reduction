@@ -1,5 +1,6 @@
 import csv
 import subprocess
+import os
 
 
 class DERunner:
@@ -39,6 +40,9 @@ class DERunner:
             for sample in samples:
                 line[sample] = self.manager.data_fetcher.data[sample]['data'][index]
             data_to_write.append(line)
+
+        if not os.path.exists('dimension_reduction/r_scripts/tmp_data'):
+            os.makedirs(path)
 
         with open('dimension_reduction/r_scripts/tmp_data/expression.csv', 'w+') as f:
             writer = csv.DictWriter(f, ['feature_id'] + samples)
